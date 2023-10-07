@@ -1,4 +1,4 @@
-Proceso TaTeTi
+Algoritmo 3enraya
     
     // incializa dos matrices de 3x3, una para guardar la ficha que se ve, 
     // y otra para un valor asociado a la ficha, para un jugador sera 1, para
@@ -39,7 +39,7 @@ Proceso TaTeTi
         
         Si ~ Ganador y CantTurnos<9 Entonces
             
-            // carga auxiliares segun a qué jugador le toca
+            // carga auxiliares segun a quÃ© jugador le toca
             Si TurnoJugador1 Entonces
                 Ficha<-'O'; Valor<- 1; Objetivo<-1
                 Escribir "Turno del jugador 1 (O)"
@@ -48,20 +48,20 @@ Proceso TaTeTi
                 Escribir "Turno del jugador 2 (X)"
             FinSi
             
-            // pide la posición para colocar la ficha y la valida
-            Escribir "Ingrese la Posición (1-9):"
+            // pide la posiciÃ³n para colocar la ficha y la valida
+            Escribir "Ingrese la PosiciÃ³n (1-9):"
             
             Repetir
                 Leer Pos
                 Si Pos<1 o Pos>9 Entonces
-                    Escribir "Posición incorrecta, ingrese nuevamente: "
+                    Escribir "PosiciÃ³n incorrecta, ingrese nuevamente: "
                     Pos<-99;
                 Sino
                     i<-trunc((Pos-1)/3)+1
                     j<-((Pos-1) MOD 3)+1
                     Si Tab1[i,j]<>0 Entonces
                         pos<-99
-                        Escribir "Posición incorrecta, ingrese nuevamente: "
+                        Escribir "PosiciÃ³n incorrecta, ingrese nuevamente: "
                     FinSi
                 FinSi
             Hasta Que Pos<>99
@@ -70,7 +70,7 @@ Proceso TaTeTi
             Tab1[i,j]<-Valor
             Tab2[i,j]<-Ficha
             
-            // verifica si ganó, buscando que el producto de las fichas en el tablero de Objetivo
+            // verifica si ganÃ³, buscando que el producto de las fichas en el tablero de Objetivo
             aux_d1<-1; aux_d2<-1
             Para i<-1 hasta 3 hacer
                 aux_i<-1; aux_j<-1
@@ -108,4 +108,4 @@ Proceso TaTeTi
         
     FinMientras
     
-FinProceso
+FinAlgoritmo
